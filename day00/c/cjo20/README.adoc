@@ -1,0 +1,13 @@
+Does this work ok with C?
+
+== Hello World
+
+Build using command:
+$ g++ solution.cpp -o ./hello-world
+
+Run using:
+$ ./hello-world
+
+....
+include::solution.c
+....
