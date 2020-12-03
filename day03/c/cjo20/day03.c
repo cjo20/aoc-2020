@@ -48,7 +48,10 @@ void read_grid(FILE * input, char * grid)
                 break;
 
             case -1:
-                return;            
+                return;
+
+            case '\n':
+                continue;
         }
     }
 }
