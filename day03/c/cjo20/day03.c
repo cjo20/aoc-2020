@@ -90,7 +90,7 @@ int main(int argc, char * argv[])
 
     int array_size = num_lines * line_width;
 
-    char  * grid = malloc(array_size * sizeof(char));
+    char * grid = malloc(array_size * sizeof(char));
 
     read_grid(input, grid);
 
@@ -105,5 +105,7 @@ int main(int argc, char * argv[])
     second_answer *= (int64_t) traverse_grid(grid, line_width, num_lines, 0, 0, 1, 2);
 
     printf("Second answer: %lu\n", second_answer);
+
+    free(grid);
     return 0;
 }
