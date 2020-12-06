@@ -37,7 +37,6 @@ int main()
     int total_all = 0;
     while((num_chars = getline(&line, &line_length, input)) != -1)
     {
-        //printf("Read %d characters - %s", num_chars, line);
         if (num_chars > 1 || feof(input))
         {
             answer_any_mask |= answer_mask(line, num_chars);
@@ -47,8 +46,8 @@ int main()
         if(num_chars == 1 || feof(input))
         {
             total_any += count_bits(answer_any_mask);
-            int tmp  =  count_bits(answer_all_mask);
-            total_all += tmp;
+            total_all +=  count_bits(answer_all_mask);
+            
             answer_any_mask = 0;
             answer_all_mask = 0x3ffffff;    
         }
