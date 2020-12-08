@@ -32,7 +32,7 @@ int main(int argc, char * argv[])
         {
             memcpy(program_copy, program, instr_count * sizeof(instr_t));
             memset(visited, 0, sizeof(char) * instr_count);
-            program_copy[i].opcode ^= 0x3;
+            program_copy[i].opcode ^= 0x3; // swap NOP and JMP (JMP = 0b01, NOP = 0b10)
             int res = execute_program(program_copy, instr_count, visited, &result);
 
             if (res)
